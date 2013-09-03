@@ -34,7 +34,7 @@ if (!global.hasOwnProperty('db')) {
         var port = pgtokens[1];
         var dbname = pgtokens[2];
         var user = pgtokens[3];
-        var password = pgtokens[4];
+        var password = pgtokens[4].replace(/\n/, '');
         var config =  {
             dialect:  'postgres',
             protocol: 'postgres',
